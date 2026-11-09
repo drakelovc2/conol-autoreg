@@ -1,0 +1,55 @@
+{
+  "_комментарий": "conol-autoreg — пример конфига. Скопируй в config.json. Секреты (password, admin_key, прокси) не коммитить.",
+  "conol": {
+    "base_url": "https://conol.ai",
+    "password": "CHANGE_ME_STRONG_PASSWORD",
+    "site_key": "6Lc3wmAtAAAAAB9YBPXQtT9uGGsH3ul6LQBc5AUu"
+  },
+  "proxies": [],
+  "proxies_file": "data/proxies.txt",
+  "proxy_check_timeout": 12,
+  "proxy_fail_threshold": 3,
+  "_proxy_note": "Без прокси conol режет серию sign-up по IP (~2 аккаунта, дальше 429). Для массового прогона — пул residential/ISP по строке в data/proxies.txt или brd_zones. Chrome и HTTP-регистрация ходят с одного exit-IP.",
+  "brd_host": "brd.superproxy.io:44445",
+  "brd_customer": "REPLACE_ME",
+  "brd_zones": [],
+  "captcha": {
+    "providers": [
+      "chrome_cdp"
+    ],
+    "cdp_port": 9228,
+    "headless": false,
+    "display": ":99",
+    "chrome_path": "",
+    "profile_dir": "data/chrome_cdp_profile",
+    "anticaptcha_keys": []
+  },
+  "_captcha_note": "chrome_cdp — бесплатно: headful Chrome минтит reCAPTCHA v3. Headless conol отбивает 403, поэтому нужен X display (start.sh поднимает Xvfb). chrome_path пустой = автопоиск (PATH → ~/.cache/ms-playwright). anticaptcha_keys — платный fallback.",
+  "emails": {
+    "gmail": {
+      "enabled": false
+    },
+    "tonline": {
+      "enabled": false,
+      "creds_file": "working_mails.txt",
+      "state_file": "tonline_state.json",
+      "imap_host": "secureimap.t-online.de"
+    },
+    "catchall": {
+      "enabled": true,
+      "api_base": "https://mail.example.com",
+      "admin_key": "REPLACE_ME",
+      "domain": "example.com"
+    }
+  },
+  "_email_note": "catchall — apimail-совместимый admin API: GET {api_base}/admin/mails?address=…&limit=…&offset=0 с заголовком x-admin-auth. Ящик не нужен. gmail — плюс-алиасы одного ящика через IMAP; tonline — готовые ящики email:password в файле.",
+  "registration": {
+    "name_prefix": "Conol",
+    "email_prefix": "conol",
+    "email_domain": "example.com",
+    "starting_credits": 600,
+    "base_delay_sec": 30,
+    "delay_per_account_sec": 15,
+    "verify_timeout_sec": 180
+  }
+}

@@ -1,0 +1,4 @@
+requests>=2.31
+playwright>=1.40
+# Браузер для капчи ставится отдельно:
+#   python3 -m playwright install chromium
