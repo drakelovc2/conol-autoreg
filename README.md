@@ -11,8 +11,8 @@
 ## Что даёт аккаунт
 
 - **600 кредитов** на старте.
-- Модели в агенте: Claude Opus 5.5 / Sonnet 5.5 / Haiku 5.5, GPT-6 Astra / 6.1 Sol /
-  6 Luna, Kimi 3.1 Pro, DeepSeek 4.1 1017, MiniMax M3, Qwen 3.8 Max.
+- Модели на фри-тире: Claude Haiku 5.5, GPT-6 Luna, DeepSeek 4.1 1017,
+  MiniMax M3, Qwen 3.8 Max.
 - Кодинг через GitHub: агент клонит репозиторий и работает в своей VM.
 
 ## Как устроен флоу
