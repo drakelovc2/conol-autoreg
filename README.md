@@ -119,3 +119,8 @@ python3 conol_refresh.py --max 3 --cdp   # через браузер
 ## Лицензия
 
 MIT + условие добросовестного использования — см. [LICENSE](LICENSE).
+---
+
+🔥 Telegram: [@antivibedrake](https://t.me/antivibedrake) · [@zakurulife](https://t.me/zakurulife)
+
+Только для личного использования — см. [DISCLAIMER.md](DISCLAIMER.md).
